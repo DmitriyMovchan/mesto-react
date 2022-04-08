@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    margin: 45px 0 0 0;
+    width: 100%;
+    min-height: 74px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 880px) {
+    .header {
+        max-width: 320px;
+        margin: 28px 0 42px 0;
+        min-height: 56px;
+    }
+}
