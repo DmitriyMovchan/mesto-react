@@ -23,9 +23,7 @@
 @import url(../src/components/blocks/mask-group/mask-group.css);
 @import url(../src/components/blocks/mask-group/__description/mask-group__description.css);
 @import url(../src/components/blocks/mask-group/__group/mask-group__group.css);
-
-@import url(../src/components/blocks/mask-group/__group/_count/mask-group__group_count);
-
+@import url(../src/components/blocks/mask-group/__group/_count/mask-group__group_count.css);
 @import url(../src/components/blocks/mask-group/__group/_heard/mask-group__group_heard.css);
 @import url(../src/components/blocks/mask-group/__group/_heard/_black/mask-group__group_heard_black.css);
 @import url(../src/components/blocks/footer/footer.css);
