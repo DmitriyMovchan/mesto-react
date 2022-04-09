@@ -1,5 +1,5 @@
-.mask-group__heard {
-    background-image: url(../../../images/heard.svg);
+.mask-group__group_heard {
+    background-image: url(../../../../components/images/heard.svg);
     background-position: center;
     box-sizing: border-box;
     background-repeat: no-repeat;
@@ -11,6 +11,6 @@
     background-color: white;
 }
 
-.mask-group__heard:hover {
+.mask-group__group_heard:hover {
     opacity: .5;
 }

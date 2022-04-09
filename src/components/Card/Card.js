@@ -10,7 +10,7 @@ function Card({card, onClick}) {
         <article className="element">
         <button className="element__delete"></button>
         <button className="element__button-image" type="submit">
-            <img className="element__image" src={card && card.link} alt="Картинка" onClick={handleClick}/>
+            <img className="element__image" src={card && card.link} alt={card.name} onClick={handleClick}/>
         </button>
         <div className="mask-group"> 
             <h2 className="mask-group__description">{card && card.name}</h2>

@@ -6,7 +6,7 @@ function PopupWithForm(props) {
         if (props.onClose && typeof props.onClose === 'function') props.onClose();
     }
 
-    return <div className={`popup popup_transition popup_${props.name} ${props.opened ? "popup_open" : ''}`}>
+    return <div className={`popup popup_transition popup_${props.name} ${props.opened && "popup_open"}`}>
     <div className="popup__container">
         <button className="popup__close" type="button" onClick={onClick}></button>
         <h2 className="popup__heading">{props.title}</h2>
@@ -15,7 +15,7 @@ function PopupWithForm(props) {
                 {props.children}
             </fieldset>
             <button className="popup__button" type="submit">
-                    Сохранить
+                    {props.buttonText}
                 </button>
         </form>
     </div>

@@ -9,6 +9,7 @@ function Main(props) {
     const[userName, setUserName] = React.useState('');
     const[userDescription, setUserDescription] = React.useState('');
     const[userAvatar, setUserAvatar] = React.useState('');
+    const[cards, setCards] = React.useState([]);
     //const[userProfile, setUserProfile] = React.useState({})
 
     React.useEffect(() => {
@@ -19,8 +20,6 @@ function Main(props) {
             //setUserProfile(res);
         });
       }, []); 
-
-      const[cards, setCards] = React.useState([]);
 
       React.useEffect(() => {
         api.getInitialCards().then((res) => {
@@ -37,8 +36,7 @@ function Main(props) {
         });
         
     }, []);
-
-      
+     
     return <main className="content">
     <section className="profile">
         <button className="profile__avatar-button" onClick={props.onEditAvatar}>
@@ -66,15 +64,7 @@ function Main(props) {
         }
     </section>
 
-
-  
-
-
 </main>
-
-
-
-
 }
 
 export default Main
