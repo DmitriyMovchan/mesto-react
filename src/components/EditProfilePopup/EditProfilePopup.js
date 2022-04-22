@@ -21,10 +21,9 @@ function EditProfilePopup(props) {
     // После загрузки текущего пользователя из API
     // его данные будут использованы в управляемых компонентах.
     React.useEffect(() => {
-        console.log('jjjj')
         if (currentUser) {
-            setName(currentUser.name);
-            setDescription(currentUser.about);
+            setName(currentUser.name || '');
+            setDescription(currentUser.about || 's');
         }
     }, [currentUser]);
 
@@ -41,9 +40,9 @@ function EditProfilePopup(props) {
 
     return (
     <PopupWithForm buttonText={'Сохранить'} name='edit-profile' title='Редактировать профиль' opened={props.opened} onClose={props.onClose} onSubmit={handleSubmit}>
-        <input onChange={handleName} value={name} className="popup__input popup__input_type_name" type="text" name="name" placeholder="Введите имя" required minLength="2" maxLength="40" id="input_name" />
+        <input onChange={handleName} value={name || ''} className="popup__input popup__input_type_name" type="text" name="name" placeholder="Введите имя" required minLength="2" maxLength="40" id="input_name" />
         <span id="input_name-error" className="popup__error"></span>
-        <input onChange={handleDescription} value={description} className="popup__input popup__input_type_profession" type="text" name="profession" placeholder="Введите род деятельности" required minLength="2" maxLength="200" id="input_profession" />
+        <input onChange={handleDescription} value={description || ''} className="popup__input popup__input_type_profession" type="text" name="profession" placeholder="Введите род деятельности" required minLength="2" maxLength="200" id="input_profession" />
         <span id="input_profession-error" className="popup__error"></span>
     </PopupWithForm>
     )
