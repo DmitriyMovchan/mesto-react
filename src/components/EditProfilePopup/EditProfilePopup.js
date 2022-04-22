@@ -25,7 +25,7 @@ function EditProfilePopup(props) {
             setName(currentUser.name || '');
             setDescription(currentUser.about || 's');
         }
-    }, [currentUser]);
+    }, [currentUser, props.opened]);
 
     function handleSubmit(e) {
         // Запрещаем браузеру переходить по адресу формы
