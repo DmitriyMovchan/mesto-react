@@ -46,6 +46,8 @@ function App() {
         api.editProfile(name, about).then((res) => {
             setCurrentUser(res);
             closeAllPopups()
+        }).catch((err) => {
+            console.log(err);
         });
     }
 
@@ -54,7 +56,9 @@ function App() {
             console.log(res)
             setCards([res, ...cards]); 
             closeAllPopups();
-        })
+        }).catch((err) => {
+            console.log(err);
+        });
     }
 
     const [currentUser, setCurrentUser] = React.useState();
@@ -62,7 +66,9 @@ function App() {
     React.useEffect(() => {
         api.getProfile().then((res) => {
             setCurrentUser(res);
-        })
+        }).catch((err) => {
+            console.log(err);
+        });
     }, [])
 
     function handleUpdateAvatar({avatar}) {
@@ -70,7 +76,9 @@ function App() {
             console.log('res', res)
             setCurrentUser(res);
             closeAllPopups()
-        })
+        }).catch((err) => {
+            console.log(err);
+        });
     }
 
     const[cards, setCards] = React.useState([]);    
@@ -87,6 +95,8 @@ function App() {
                 }
             });
             setCards(data)
+        }).catch((err) => {
+            console.log(err);
         });
         
     }, []);
