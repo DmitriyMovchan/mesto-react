@@ -18,6 +18,7 @@
 @import url(../src/blocks/element/element.css);
 @import url(../src/blocks/element/__image/element__image.css);
 @import url(../src/blocks/element/__delete/element__delete.css);
+@import url(../src/blocks/element/__delete/_hide/element__delete_hide.css);
 @import url(../src/blocks/element/__button-image/element__button-image.css);
 @import url(../src/blocks/popup/__button/_delete/popup__button_delete.css);
 @import url(../src/blocks/mask-group/mask-group.css);

@@ -1,7 +1,6 @@
 import React from "react";
 
 function ImagePopup(props) {
-    console.log('dddd')
     return <div className={`popup popup_big popup_transition ${props.opened ? "popup_open" : ''}`}>
         <div className="popup__container popup__container_image">
             <button className="popup__close popup__close_big-image" type="button" onClick={props.onClose}></button>

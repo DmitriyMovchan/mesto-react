@@ -79,6 +79,11 @@ class Api {
         }).then(this._checkResponse)
     }
 
+    changeLikeCardStatus(cardId, newIsLiked) {
+        if (newIsLiked) return this.addLike(cardId) 
+        else return this.deleteLike(cardId)
+    }
+
     // другие методы работы с API
 }
 
