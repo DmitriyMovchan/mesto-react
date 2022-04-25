@@ -61,7 +61,7 @@ function App() {
         });
     }
 
-    const [currentUser, setCurrentUser] = React.useState();
+    const [currentUser, setCurrentUser] = React.useState({});
 
     React.useEffect(() => {
         api.getProfile().then((res) => {
@@ -115,7 +115,7 @@ function App() {
     function handleCardDelete(card) {
         const isMyCard = card.owner._id === currentUser._id;
         if (isMyCard) api.deleteCard(card._id).then(() => {
-            setCards(cards.filter((x) => x._id !== card._id))
+            setCards((state) => state.filter((x) => x._id !== card._id))
         }).catch((err) => {
             console.log(err);
         })
